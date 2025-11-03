@@ -16,6 +16,8 @@ import {
   versionSelector,
 } from "docusaurus-plugin-openapi-docs/lib/sidebars/utils";
 
+import schema1Sidebar from "./docs/schema_1/sidebar";
+import schema2Sidebar from "./docs/schema_2/sidebar";
 import petstoreSidebar from "./docs/petstore/sidebar";
 import petstoreVersionedSidebar from "./docs/petstore_versioned/sidebar";
 import petstoreVersionSidebar from "./docs/petstore_versioned/1.0.0/sidebar";
@@ -65,6 +67,24 @@ const sidebars: SidebarsConfig = {
     },
   ],
   petstore: [
+    {
+      type: "category",
+      label: "Schema 1",
+      link: {
+        type: "generated-index",
+        title: "Schema 1 API",
+      },
+      items: schema1Sidebar,
+    },
+    {
+      type: "category",
+      label: "Schema 2",
+      link: {
+        type: "generated-index",
+        title: "Schema 2 API",
+      },
+      items: schema2Sidebar,
+    },
     {
       type: "category",
       label: "Petstore",

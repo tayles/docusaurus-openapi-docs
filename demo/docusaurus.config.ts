@@ -267,6 +267,22 @@ const config: Config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
+          schema_1: {
+            specPath: "examples/schema-1.yaml",
+            outputDir: "docs/schema_1",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+          schema_2: {
+            specPath: "examples/schema-2.yaml",
+            outputDir: "docs/schema_2",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
           petstore_versioned: {
             maskCredentials: false,
             specPath: "examples/petstore.yaml",

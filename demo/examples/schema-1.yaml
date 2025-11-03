@@ -1,0 +1,32 @@
+openapi: 3.0.0
+servers:
+  - url: https://my-api.com/{path}
+    variables:
+      path:
+        default: schema-1-path
+        description: A path variable
+info:
+  title: "Schema #1"
+  description: This is the first schema
+  version: "1.0.0"
+paths:
+  /some-endpoint:
+    get:
+      operationId: getSomeEndpoint
+      summary: Get some endpoint
+      security: []
+      tags:
+        - Tag from Schema 1
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello from Schema #1"
+tags:
+  - name: Tag from Schema 1
